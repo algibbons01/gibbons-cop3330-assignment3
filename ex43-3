@@ -1,0 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 first_name last_name
+ */
+
+public class Strings {
+  public static boolean isEmpty(String s) { return s == null || s.isEmpty(); }
+}

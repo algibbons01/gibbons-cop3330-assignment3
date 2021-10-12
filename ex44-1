@@ -1,0 +1,14 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 first_name last_name
+ */
+
+package com.example;
+
+import java.util.List;
+
+class Inventory {
+  private List<Product> products;
+  public List<Product> getProducts() { return products; }
+  public void setProducts(List<Product> products) { this.products = products; }
+}

@@ -1,0 +1,14 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 first_name last_name
+ */
+
+import java.util.List;
+
+class Main {
+  public static void main(String[] args) {
+    var service = new EmployeeService();
+    var employees = service.getEmployees("employees.txt");
+    service.printEmployees(employees);
+  }
+}

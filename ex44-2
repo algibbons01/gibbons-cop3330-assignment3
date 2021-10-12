@@ -1,0 +1,26 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 first_name last_name
+ */
+
+package com.example;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Optional;
+
+class InventoryService {
+  private Inventory inventory;
+
+  public void loadProducts(String path) {
+    var mapper = new ObjectMapper();
+    try {
+      inventory = mapper.readValue(ClassLoader.getSystemClassLoader().getResourceAsStream(path), Inventory.class);
+    } catch (Throwable e) {
+      e.printStackTrace();
+    }
+  }
+
+  public Optional<Product> findProduct(String productName) {
+    return inventory.getProducts().stream().filter(p -> p.getName().equals(productName)).findFirst();
+  }
+}
